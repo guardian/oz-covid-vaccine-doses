@@ -11,7 +11,8 @@ columns = ["Jurisdiction", "Description", "Allocation", "Vaccinations", "Vaccina
 df = df[3:]
 
 df.columns = columns
-print(df)
 
 with open (f"{data_path}doses.csv", "w") as f:
     df.to_csv(f, index=False, header=True)
+
+print(df)
